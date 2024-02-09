@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number methods</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const num = 1234.52732
+
+        // toFixed() -> to print how many number of digits after the decimal point
+        document.write(`toFixed: ${num.toFixed(3)} <br/>`)
+
+        // toPrecision() ->to  print how many number of digits from the starting.
+        document.write(`toPrecision: ${num.toPrecision(2)} <br/>`)
+
+        // Number() -> convert the string  to the Number in both float and integer
+        let x = '8.732'
+        document.write(typeof(x))
+        document.write(`<br/> Number:  ${Number(x)} <br/>`)
+        document.write(typeof(Number(x)))
+
+        // parseInt() ->  convert  the string to the  Intiger values.
+        document.write(`<br/> parseInt:  ${parseInt(x)} <br/>`)
+
+        // parseFloat() ->  convert  the string to the  float or decimal values.
+        document.write(`<br/> parseFloat:  ${parseFloat(x)} <br/>`)
+
+    </script>
+
+</body>
+</html>

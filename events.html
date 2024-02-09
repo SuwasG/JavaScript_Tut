@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+
+<pre>
+    1. onclick -> occurs when click on html element
+    2. ondblclick ->   when double click on html element.
+    3. onmouseover ->  when on the mouse is over the html element.
+    4. onmouseout -> when the mouse is out of the html element or  mouse/cursor move away from the html element.
+    5. onchange-> when the input field is changed.
+    6. onsubmit -> when the form is submitted.
+    7. onkeyup -> when the key is pushed and released.
+    8. onkeydown -> when the key is released.
+    9. onfocus -> when focus on the html element.
+    10. onload -> when the browser is loaded.
+    11. onmousemove -> when the mouse/cursor moves.
+</pre>
+    
+
+    <button onclick="clickFuncn()">
+        click
+    </button>
+
+    <button ondblclick="dblclickFuncn()">
+       double click
+    </button>
+    <button onmouseover="mouseOver()">
+       onmouseover
+    </button>
+
+   <h2 id="dbl"></h2>
+   <h2 id='mouseover'></h2>
+
+   <textarea id="bio" onkeyup="updateCharacterCount()"></textarea>
+<p>Characters left: <span id="charCount">200</span></p>
+<p>User Input: <span id="userInput"></span></p>
+
+
+    <script>
+
+        const clickFuncn = ()=>{
+            alert("button is clicked.")
+        }
+
+        const dblclickFuncn = ()=>{
+            document.getElementById("dbl").innerHTML= "double clicked on the button"
+        }
+
+        const mouseOver =()=>{
+            document.querySelector("#mouseover").innerHTML = new Date
+        }
+
+        function updateCharacterCount() {
+    var bio = document.getElementById('bio').value;
+    console.log(bio)
+   
+    var remaining = 200 - bio.length;
+    document.getElementById('charCount').textContent = remaining;
+    document.getElementById('userInput').textContent = bio;
+    
+  }
+
+        
+
+    </script>
+
+</body>
+</html>

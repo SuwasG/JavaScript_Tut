@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string methods</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const text = `That is Javascript class. Javascript is mainly used for web development as scripting language. Javascript is the most popular programming language.`
+
+        const text2= 'Hello, we are at Dursikshya.'
+
+        // length
+        document.write(text2.length)
+        document.write(`<br/> length of the text is: ${text.length} <br/>`)
+
+        // toUpperCase()
+        document.write(`to upper case: ${text2.toUpperCase()} <br/> `)
+        // toLowerCase()
+        document.write(`to lower case: ${text2.toLowerCase()} <br/> `)
+
+
+        // concat
+        document.write(`concatinating two texts: ${text2.concat(text)} <br/>`)
+
+        // indexOf()
+        document.write(`index of D in text2:${text2.indexOf('D')} <br/>`)
+
+        // lastIndexOf()
+        document.write(`last index of l in text2: ${text2.lastIndexOf('l')} <br/>`)
+
+        // replace()
+        document.write(`replace: ${text.replace('Javascript', 'Python')} <br/>`)
+
+        // replaceAll()
+        document.write(`replaceAll: ${text.replaceAll('Javascript', 'Python')} <br/>`)
+
+        // repeat()
+        document.write(`repeat: ${text2.repeat(3)}`)
+
+
+        // includes
+        document.write(`includes D :  ${text2.includes('D')} <br/>`)
+        document.write(`includes d:  ${text2.includes('d')} <br/>`)
+
+        // charAt()
+        document.write(`at: ${text2.charAt(4)} <br/>`)
+
+        // search
+        document.write(`searching is: ${text.search('is')} <br/>`)
+
+        // slice(start, end) -> end not included.
+        document.write(`slice: ${text2.slice(2, 8)} <br/>`)
+        document.write(`slice: ${text2.slice(0, )} <br/>`)
+
+        // substring(start, end)
+        document.write(`substring 3-6:  ${text2.substring(3, 6)}  <br/>`)
+        document.write(`substring:  ${text2.substring(0, )}  <br/>`)
+
+
+        // substr(start, length)
+        document.write(`substr 3-6: ${text2.substr(3, 6 )}`)
+    
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

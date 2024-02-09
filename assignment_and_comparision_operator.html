@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment and Comparision Operator</title>
+</head>
+<body>
+
+    <script>
+
+        // assignment operator: are used to assign the values.
+        // assignment operators: 
+        // x+=y   => x= x+ y
+        // x-=y   => x= x-y
+        // x*=y   => x= x*y
+        // x/=y   => x= x/y
+        // x**=2  => x= x**2
+        // x%=2   => x= x%2
+
+        let x= 50;
+        let y= 20;
+
+        x+=y
+        document.write(` ${x} <br/> `)
+
+        x-=10
+        document.write(`${x} <br/>`)
+
+        x%=y
+        document.write(`${x} <br/>`)
+
+        x-=5
+        document.write(`${x} <br/>`)
+
+        x**=3
+        document.write(`${x}`)
+
+
+        // comparision operator:
+        // ==     => equal to
+        // ===    => equal to and of equal type (equivalent)
+        // !=   => not equal to
+        // !==   => not equivalent to
+        // <    => less than
+        // >    => greater than
+        // <=   => less than or equal to
+        // >=   => greater than or equal to
+
+
+        const a = 12
+        const b = 8
+        const c =  15
+        const d = "12"
+
+        document.write(`<br/> type of d is: ${typeof(d)} <br/>`)
+        document.write(`<br/> type of a is: ${typeof(a)} <br/>`)
+
+   
+
+        // equal to
+        document.write(`a==d: ${a==d} <br/>`)
+        // equivalent to
+        document.write(`a===d: ${a===d} <br/>`)
+
+        // less than 
+        document.write(a<b)
+        document.write(`<br/>`)
+        //  greater than
+        document.write(a>b)
+        document.write(`<br/>`)
+
+
+        document.write(a!=d)
+        document.write(`<br/>`)
+
+
+        document.write(a!==d)
+        document.write(`<br/>`)
+
+
+        document.write(b<=8)
+
+    </script>
+    
+</body>
+</html>
