@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    
+
+    <script>
+        // Array: Array are the collection of datatypes.
+        // Array are used to store multiple values in single variable.
+        // Array are written using square bracket. []
+        // Array is also one of the type of object.
+
+        const fruits =['Apple', 'Banana', 'Cherry', 'Dragon Fruit']
+
+        // document.write(typeof fruits)
+
+
+        // array methods: 
+        // to count the number of items/elements in array: length
+        document.write(`the number of items in array: ${fruits.length} <br/>`)
+
+        // indexing
+        document.write(`item on index 1: ${fruits[1]} <br/>`)
+        document.write(`index of Cherry: ${fruits.indexOf('Cherry')} <br/>`)
+
+        document.write(`character  on index 1, 1: ${fruits[1][1]} <br/>`)
+
+        // push() -> adds the item on the last position of array.
+        fruits.push("Strawberry")
+        document.write(`adding the strwaberry: ${fruits} <br/>`)
+
+        // pop() -> remove the last element from array
+        // fruits.pop()
+        document.write(`removed element: ${fruits.pop()} <br/>`)
+        document.write(`items after removing the last element: ${fruits} <br/>`)
+
+        //  shift() ->  removes the first element from the array and returns the removed element.
+        document.write(`removed first element using shift: ${fruits.shift()} <br/>`)
+        document.write(`fruits remaining: ${fruits} <br/>`)
+
+        // unshift() -> add the elements on first position of the array.
+        fruits.unshift("Blue berry")
+        document.write(fruits)
+
+
+        // slice()
+
+
+        // splice()
+
+
+        // concat()
+
+
+
+    </script>
+</body>
+</html>

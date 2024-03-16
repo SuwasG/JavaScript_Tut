@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data</title>
+</head>
+<body>
+    
+    <script>
+        // api-> Application programming interface.
+        
+        // fetch -> go for something and bring back
+        fetch(`https://fakestoreapi.com/products`)
+        .then(resParam=>
+            resParam.json() // converted string to json
+        )
+        .then(products=>{
+            console.log(products)
+            const filteredProducts = products.filter(p=>{
+              return  p.price>50
+            })
+            console.log(filteredProducts)
+        })
+
+
+    </script>
+
+</body>
+</html>

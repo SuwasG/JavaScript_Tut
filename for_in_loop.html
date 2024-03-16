@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In Loop</title>
+</head>
+<body>
+
+    <script>
+        // for in loop is used to iterate over the properties of an object.
+
+        const cakeRecipe ={
+            flour:"500 gram",
+            egg: 5,
+            vanilla: "3 drops",
+            sugar:"3 spoons"
+        }
+
+        // document.write(` ${cakeRecipe['flour']} <br/>`)
+
+        // document.write(typeof cakeRecipe)
+
+        for ( let ingredients in cakeRecipe){
+            document.write(`${ingredients} : ${cakeRecipe[ingredients]} <br/>`)
+        }
+
+        // assignment.
+        // object: student
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

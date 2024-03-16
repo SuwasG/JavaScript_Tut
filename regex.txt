@@ -1,0 +1,27 @@
+regex -> Regular Expression.
+- Regex is the sequence of characters used to search and manipulate   strings  based on certain patterns.
+
+- regex is written between /.
+- / Regular expression always write between these two symbols/
+^(cap) -> It checks from the beginning.
+$ -> It checks from the end.
+[a-z] -> It matches all the lowercase alphabets.
+[A-Z]-> it matches all the uppercase alphabets.
+[a-zA-Z] or [A-Za-z] -> It matches all the alphabets.
+[0-9] -> It matches the numeric digits.
+[a-zA-Z0-9] -> It matches alphanumeric characters.
+{min, max} -> minimum length, maximum length. (.length ko sattama, eauta matrai diyemaa min hunxa)
+Eg:{min}:  {3}
+?= -> It doesn’t matter the position of any characters if present. (password)
+. -> It matches a single character.
+ * ->  It matches one or more preceding characters.
+For special characters use \ (backslash)
+Eg: \@ , \#, \!, \S(Space), \d(digits), \Alphabets.
+() compulsory.
+Final Demo: for first name
+/^([a-zA-Z])+$/
+
+greedy vs lazy matching
+capturing
+backreference
+lookahead and lookbehind

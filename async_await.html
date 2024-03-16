@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+  </head>
+  <body>
+    <div></div>
+
+    <script>
+      // advantages: readability, debug or error handling,  eliminate the callback hell
+      // 3 stages: pending, resolved(success), rejected(fail)
+
+      const news = [
+        { newsTitle: "News Title 1", newsContent: "News Content 1" },
+        { newsTitle: "News Title 2", newsContent: "News Content 2" },
+        { newsTitle: "News Title 3", newsContent: "News Content 3" },
+        { newsTitle: "News Title 4", newsContent: "News Content 4" },
+      ];
+
+      document.write(`type of news: ${typeof news} <br/>`);
+
+      const showNews = () => {
+        let result = "";
+        // setTimeout()-> executes the block of code after the specified time for only once.
+        setTimeout(
+          () => {
+            news.forEach((x) => {
+              result += `
+                                <ul>
+                                    <li> ${x.newsTitle}  
+                                      <ul>
+                                        <li> ${x.newsContent} </li>
+                                        </ul>
+                                     </li>
+                                </ul>
+                              `;
+            });
+
+            // document.write("This  is settimeout.")
+            document.querySelector("div").innerHTML = result;
+          },
+
+          2000
+        );
+      };
+
+      showNews();
+
+      const addNews = (data) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            news.push(data);
+            let error = false;
+
+            if (!error) {
+              resolve();
+            } else {
+              reject("something went wrong.");
+            }
+          }, 3000);
+        });
+      };
+
+      // addNews({newsTitle:"this is added", newsContent:"Added content"})
+      // .then(showNews)
+      // .catch(error=>console.log(error))
+      const demoFunction = async () => {
+        try {
+          await addNews({
+            newsTitle: "this is added",
+            newsContent: "Added content",
+          });
+
+          showNews();
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      demoFunction();
+    </script>
+  </body>
+</html>

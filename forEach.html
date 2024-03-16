@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each</title>
+</head>
+<body>
+    
+    <script>
+        // forEach: Executes a provided function once for each element of an array
+
+        const fruits =['Apple', 'Banana', 'Cherry', 'Dragon Fruit']
+
+        fruits.forEach(
+            // anonymous function
+            (f) =>{
+                document.write(`${f} <br/>`)
+            }
+        )
+
+        const numbers = [10,20 , 30, 40, 50]
+        numbers.forEach((num)=>{
+            document.write(` ${num * 4} &spades;`)
+            // [10*4, 20*4, 30*4, 40*4, 50*4]
+        })
+
+    </script>
+</body>
+</html>

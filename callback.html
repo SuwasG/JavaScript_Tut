@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back function</title>
+</head>
+<body>
+
+    <div>
+
+    </div>
+    
+    <script>
+        // javascript is asynchronous language, which means it can handle multiple tasks simultaneously.
+        // callback functions are the functions passed as an argument to another function.
+        // callback function is called/invoked after the main function has finished it's execution.
+        // callback functions are used to handle the results of asynchronous operationsin a non-blocking manner.
+
+
+        const news =[
+            {newsTitle: "News Title 1", newsContent:"News Content 1"},
+            {newsTitle: "News Title 2", newsContent:"News Content 2"},
+            {newsTitle: "News Title 3", newsContent:"News Content 3"},
+            {newsTitle: "News Title 4", newsContent:"News Content 4"},
+
+        ]
+
+        document.write(`type of news: ${typeof news} <br/>`)
+    
+
+        const showNews=()=>{
+               
+                let result =""
+                 // setTimeout()-> executes the block of code after the specified time for only once.
+               setTimeout( ()=>{
+
+                news.forEach((x)=>{
+                    result += `
+                                <ul>
+                                    <li> ${x.newsTitle}  
+                                      <ul>
+                                        <li> ${x.newsContent} </li>
+                                        </ul>
+                                     </li>
+                                </ul>
+                              `
+                }
+                )
+
+                // document.write("This  is settimeout.")
+              document.querySelector('div').innerHTML = result
+               }
+
+              , 2000 )
+        }
+
+        showNews()
+
+        const addNews=(data, callbackfuncn)=>{
+            setTimeout(()=>{
+                news.push(data)
+                callbackfuncn()
+            }, 3000)
+        }
+
+        addNews({newsTitle:"this is added", newsContent:"Added content"},showNews )
+
+
+    </script>
+
+
+</body>
+</html>

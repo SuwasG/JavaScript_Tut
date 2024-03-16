@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+    
+    <script>
+        // reduce() -> method runs a function on each element of an array to produce a single value
+        const numbers =[10,20,30,40,50]
+        // 10
+        // 10+20 =30t
+        // 30 +  30t= 60
+
+        const sum = numbers.reduce((total,value)=> {
+            console.log(`total: ${total}`)
+
+            console.log(`current value: ${value}`)
+            return value + total
+        }
+        )
+        console.log(sum)
+
+    </script>
+
+</body>
+</html>

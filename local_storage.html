@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+
+    <script>
+        // local storage: is a property that allows JavaScript sites and apps to save key-value pairs in a web browser with no expiration date until we remove it.
+
+        // setItem() -> save data to local storage
+        localStorage.setItem("key1", "value for the key1")
+        localStorage.setItem("key2", "value for the key2")
+
+        // getItem() -> read/retrive the data from local storage
+      const data=   localStorage.getItem("key1")
+      console.log(data)
+
+    //   localStorage.removeItem("key1") // button to remove assignment.
+
+      localStorage.clear() // remove all the key value pairs(data) from local storage
+
+      // json - javascript object notation
+      // lightweight
+      // language independent
+      // easy to understand
+
+      const student = {
+        "name":"Ram",
+        "age":22,
+        "class":12,
+        "address":"Nepal",
+        "isPass":true,
+        "courses":["Web Dev", "App Dev", "Data Science","DevOps"]
+      }
+      document.write(typeof student )
+
+      // db or in any storage, we can not directly store the objects
+      // convert json to string:
+      const jsonToString = JSON.stringify(student)
+
+      localStorage.setItem("studentKey", jsonToString)
+
+      console.log(localStorage.getItem("studentKey"))
+
+    //  convert string to object 
+      const showData = JSON.parse(localStorage.getItem('studentKey'))
+      console.log("object: ")
+      console.log(showData)
+      console.log(showData.name)
+      console.log(showData.age)
+      console.log(showData.address)
+
+    </script>
+
+</body>
+</html>
